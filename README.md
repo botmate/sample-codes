@@ -2,6 +2,10 @@
 
 Sample codes for BotMate Plaftorm
 
+[Basics](BASICS.md)
+[Formatting](FORMATTING.md)
+[Modules](MODULES.md)
+
 
 ### Simple Reply
 
