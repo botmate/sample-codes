@@ -11,6 +11,8 @@ module.exports = {
 }
 ```
 
+## All command handler
+
 ```js
 const handler = (ctx) => {
   const msg = ctx.message.text;
