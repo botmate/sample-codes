@@ -53,44 +53,26 @@ module.exports = {
 ### Editing inlineKeyboard when pressed
 ```js
 const inlineKeyboard = new InlineKeyboard()
-
   .text("Button text", "Events");
 
-const handler = (ctx) => {
-
+ const handler = (ctx) => {
   ctx.reply("Worked.", {
-
     reply_markup: inlineKeyboard,
-
   });
-
 }
 
 module.exports = {
-
     command: 'Command Name',
-
     handler,
-
     callback: {
-
       event: "Events",
-
       handler: ctx => {
-
         ctx.editMessageText(
-
           "Your new Text here", {
-
             //Can change Your keyboard:
-
             reply_markup: inlineKeyboard,
-
           }
-
         }
-
       }
-
     }
 ```
