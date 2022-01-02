@@ -10,3 +10,27 @@ module.exports = {
   handler
 }
 ```
+
+```js
+const handler = (ctx) => {
+  const msg = ctx.message.text;
+  switch(msg) {
+     case '/start':
+        ctx.reply("Welcome");
+        break;
+     case '/help':
+        ctx.reply("No help haha");
+        break;
+     case '/about':
+        ctx.reply("About me");
+        break;
+     default:
+        ctx.reply("No command found");    
+  }
+}
+
+module.exports = {
+  command: /.*/,
+  handler
+}
+```
