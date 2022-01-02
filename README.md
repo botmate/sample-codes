@@ -26,3 +26,22 @@ module.exports = {
   handler,
 }
 ```
+
+### URL Inline Keyboard
+```js
+const inlineKeyboard = new InlineKeyboard().url(
+  "BotMate Documentation",
+  "https://docs.botmate.app",
+)
+
+const handler = (ctx) => {
+  ctx.reply("Worked", {
+    reply_markup: inlineKeyboard,
+  });
+}
+
+module.exports = {
+  command: '/start',
+  handler
+}
+```
