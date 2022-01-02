@@ -11,3 +11,18 @@ module.exports = {
   handler: ctx => ctx.reply("Hello World");
 }
 ```
+
+### Reply with photo
+```js
+const handler = (ctx) => { 
+const link = "Photo Link"
+ctx.replyWithPhoto(`${link}`,{
+reply_to_message_id: ctx.msg.message_id,
+})
+}
+
+module.exports = {
+  command: 'commandName',
+  handler,
+}
+```
