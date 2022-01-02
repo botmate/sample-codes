@@ -17,7 +17,7 @@ module.exports = {
 
 ```js
 const handler = (ctx) => {
-  ctx.reply("_I am bold_", {
+  ctx.reply("_I am Italic_", {
     parse_mode: "Markdown"
   });
 }
