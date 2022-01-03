@@ -14,7 +14,7 @@ module.exports = {
 ## All command handler
 
 ```js
-const handler = (ctx) => {
+Bot.command(/.*/, ctx => {
   const msg = ctx.message.text;
   switch(msg) {
      case '/start':
@@ -29,10 +29,5 @@ const handler = (ctx) => {
      default:
         ctx.reply("No command found");    
   }
-}
-
-module.exports = {
-  command: /.*/,
-  handler
-}
+});
 ```
