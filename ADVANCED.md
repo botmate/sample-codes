@@ -8,6 +8,6 @@ Bot.command('x', async ctx => {
     
     let isMember = status === 'member' || status == 'administrator'|| status==='creator';
     
-    ctx.reply(isMember ? "Your are member" : "You are not a member");
+    ctx.reply(isMember ? "You are a member" : "You are not a member");
 })
 ```
