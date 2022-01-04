@@ -11,3 +11,15 @@ Bot.command('x', async ctx => {
     ctx.reply(isMember ? "You are a member" : "You are not a member");
 })
 ```
+
+## Questin and Answer
+
+```js
+Bot.command("/start", ctx => {
+  ctx.reply("Please enter your name");
+}, true);
+
+Bot.on("answer", ctx => {
+  ctx.reply(`Hello, ${ctx.message.text}`);
+})
+```
