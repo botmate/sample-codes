@@ -5,7 +5,8 @@ Sample codes for BotMate Plaftorm
 * [Basics](BASICS.md)
 * [Formatting](FORMATTING.md)
 * [Modules](MODULES.md)
-* [Advanced](ADVANCED.md)
+* [Advanced](ADVANCED.md) <br>
+* [By Users](https://github.com/botmate/sample-codes/blob/main/BY%20USERS.md)
 
 
 ### Simple Reply
