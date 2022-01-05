@@ -1,7 +1,7 @@
 # By BotMate users
 
 ### 1. QR Code generator bot
-[DOWNLOAD IMPORT FILE]()
+[DOWNLOAD IMPORT FILE](https://t.me/BotMate/28939)
 
 ```js
 // Pass true in the third parameter to make it a question
