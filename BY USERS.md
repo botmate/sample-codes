@@ -1,1 +1,1 @@
-# By users of BotMate
+# By BotMate users
