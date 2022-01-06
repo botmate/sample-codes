@@ -1,4 +1,4 @@
-## Check if user is a member of a chat
+## User Status
 
 ```js
 
@@ -12,14 +12,30 @@ Bot.command('x', async ctx => {
 })
 ```
 
-## Questin and Answer
+## Only for admins
+```js
+Bot.on("message").filter(
+  async (ctx) => {
+    const user = await ctx.getAuthor();
+    return user.status === "creator" || user.status === "administrator";
+  },
+  (ctx) => {
+    const msg = ctx.message.text;
+    if (msg === '/ban') {
+      // ... do your task
+    }
+  },
+);
+```
+
+## Question and Answer
 
 ```js
 Bot.command("/start", ctx => {
   ctx.reply("Please enter your name");
-}, true);
+}, 'name');
 
-Bot.on("answer", ctx => {
+Bot.on("answer-name", ctx => {
   ctx.reply(`Hello, ${ctx.message.text}`);
 })
 ```
