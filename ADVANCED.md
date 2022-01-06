@@ -1,5 +1,5 @@
 ## User Status
-
+> This code will check the user status by using id.
 ```js
 
 Bot.command('x', async ctx => {
@@ -13,6 +13,7 @@ Bot.command('x', async ctx => {
 ```
 
 ## Only for admins
+> This code will run only if the user is an admin.
 ```js
 Bot.on("message").filter(
   async (ctx) => {
@@ -29,7 +30,7 @@ Bot.on("message").filter(
 ```
 
 ## Question and Answer
-
+> Ask questions a question and wait for an answer.
 ```js
 Bot.command("/start", ctx => {
   ctx.reply("Please enter your name");
@@ -38,4 +39,13 @@ Bot.command("/start", ctx => {
 Bot.on("answer-name", ctx => {
   ctx.reply(`Hello, ${ctx.message.text}`);
 })
+```
+
+## Question and Answer
+> Removes any message if it's forwaded from a channel. Bot must have permission to delete message.
+```js
+Bot.on(["channel_post", ":forward_date"], ctx => {
+  ctx.deleteMessage()
+})
+
 ```
