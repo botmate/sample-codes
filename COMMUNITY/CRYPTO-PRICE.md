@@ -1,3 +1,6 @@
+# Get Live Crypto price with coingecko Api
+> For crypto coins only. Credits: [@Radical_11111](t.me/Radical_11111)
+
 ```js
 Bot.command('p',async ctx => {
     let input = ctx.message.text
@@ -23,4 +26,3 @@ Bot.command('p',async ctx => {
 })
 ```
 
-By @Radical_11111
