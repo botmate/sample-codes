@@ -46,6 +46,29 @@ Bot.on('answer', 'fname', ctx => {
 
 ```
 
+
+## Multiple Question and Answer
+> Ask questions a question and wait for an answer.
+```js
+
+Bot.command('start', ctx => {
+  ctx.reply("First name");
+  
+  // add listener for fname
+  ctx.question('fname')
+});
+
+Bot.on('answer', 'fname', ctx => {
+  ctx.reply("Send me your last name " + ctx.from.first_name);
+  ctx.question('lname')
+});
+
+Bot.on('answer', 'lname', ctx => {
+  ctx.reply("Your last name is" + ctx.from.first_name);
+});
+
+```
+
 ## Delete Forwaded Message
 > Removes any message if it's forwaded from a channel. Bot must have permission to delete message.
 ```js
