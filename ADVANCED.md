@@ -59,7 +59,7 @@ Bot.on(["channel_post", ":forward_date"], ctx => {
 ```
 
 ## Ban senderChat
-> Bans channel messages from users, along with logs
+> Bans channel messages from users, along with logs. [You can also Download importable File](https://t.me/BotMate/33515)
 ```js
 Bot.hears(/.*/, ctx => {
   if (ctx.message.sender_chat) {
