@@ -32,21 +32,18 @@ Bot.on("message").filter(
 ## Question and Answer
 > Ask questions a question and wait for an answer.
 ```js
-Bot.command("start", ctx => {
-  const { id } = ctx.from; // get user id
-  ctx.reply("Please enter your first name");
-  Bot.Question(id, 'fn');
+
+Bot.command('start', ctx => {
+  ctx.reply("First name");
+  
+  // add listener for fname
+  ctx.question('fname')
 });
 
-Bot.on('answer-fn', ctx => {
-  const { id } = ctx.from; // get user id
-  ctx.reply(`Hi, ${ctx.message.text}, Please send your last name`);
-  Bot.Question(id, 'fn');
-})
+Bot.on('answer', 'fname', ctx => {
+  ctx.reply("Hello, " + ctx.from.first_name);
+});
 
-Bot.on('answer-ln', ctx => {
-  ctx.reply(`Your last name is ${ctx.message.text}`);
-})
 ```
 
 ## Question and Answer
