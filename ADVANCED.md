@@ -46,7 +46,7 @@ Bot.on('answer', 'fname', ctx => {
 
 ```
 
-## Question and Answer
+## Delete Forwaded Message
 > Removes any message if it's forwaded from a channel. Bot must have permission to delete message.
 ```js
 Bot.on(["channel_post", ":forward_date"], ctx => {
