@@ -50,7 +50,6 @@ Bot.on('answer', 'fname', ctx => {
 ## Multiple Question and Answer
 > Ask questions a question and wait for an answer.
 ```js
-
 Bot.command('start', ctx => {
   ctx.reply("First name");
   
@@ -59,12 +58,12 @@ Bot.command('start', ctx => {
 });
 
 Bot.on('answer', 'fname', ctx => {
-  ctx.reply("Send me your last name " + ctx.from.first_name);
+  ctx.reply("Send me your last name " + ctx.message.text);
   ctx.question('lname')
 });
 
 Bot.on('answer', 'lname', ctx => {
-  ctx.reply("Your last name is" + ctx.from.first_name);
+  ctx.reply("Your last name is " + ctx.message.text);
 });
 
 ```
