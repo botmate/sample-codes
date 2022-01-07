@@ -58,20 +58,3 @@ Bot.on(["channel_post", ":forward_date"], ctx => {
 
 ```
 
-## Ban senderChat
-> Bans channel messages from users, along with logs. [You can also Download importable File](https://t.me/BotMate/33515)
-```js
-Bot.hears(/.*/, ctx => {
-  if (ctx.message.sender_chat) {
-    //Bot must be admin in logs channel
-    //Logs channel:
-    var logs = "@chatblocksLogs"
-    ctx.api.sendMessage(logs, "Banned: @" + ctx.message.sender_chat.username)
-    var id = ctx.message.sender_chat.id
-    //ctx.api.deleteMessage("@botsTestbyKp", ctx.message.message_id)
-    //Bot must be Admin in chat with ban user permissions 
-    //Block code:
-    ctx.api.banChatSenderChat("@botsTestbyKp", id)
-  }
-})
-```
