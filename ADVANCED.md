@@ -41,7 +41,7 @@ Bot.command('start', ctx => {
 });
 
 Bot.on('answer', 'fname', ctx => {
-  ctx.reply("Hello, " + ctx.from.first_name);
+  ctx.reply("Hello, " + ctx.message.text);
 });
 
 ```
