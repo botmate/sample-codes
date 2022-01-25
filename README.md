@@ -12,25 +12,20 @@ Sample codes for BotMate Plaftorm
 ### Simple Reply
 
 ```js
-module.exports = {
-  command: '/start',
-  handler: ctx => ctx.reply("Hello World");
-}
+const handler = ctx => ctx.reply("Hello World");
+Bot.command('start', handler);
 ```
 
 ### Reply with photo
 ```js
 const handler = (ctx) => { 
-const link = "Photo Link"
-ctx.replyWithPhoto(`${link}`,{
-reply_to_message_id: ctx.msg.message_id,
-})
+  const link = "Photo Link"
+  ctx.replyWithPhoto(`${link}`,{
+    reply_to_message_id: ctx.msg.message_id,
+  })
 }
 
-module.exports = {
-  command: 'commandName',
-  handler,
-}
+Bot.command('photo', hanlder);
 ```
 
 ### URL Inline Keyboard
@@ -46,35 +41,6 @@ const handler = (ctx) => {
   });
 }
 
-module.exports = {
-  command: '/start',
-  handler
-}
+Bot.command('start', handler);
 ```
-
-### Editing inlineKeyboard when pressed
-```js
-const inlineKeyboard = new InlineKeyboard()
-  .text("Button text", "Events");
-
- const handler = (ctx) => {
-  ctx.reply("Worked.", {
-    reply_markup: inlineKeyboard,
-  });
-}
-
-module.exports = {
-    command: 'Command Name',
-    handler,
-    callback: {
-      event: "Events",
-      handler: ctx => {
-        ctx.editMessageText(
-          "Your new Text here", {
-            //Can change Your keyboard:
-            reply_markup: inlineKeyboard,
-          }
-        }
-      }
-    }
-```
+ 
